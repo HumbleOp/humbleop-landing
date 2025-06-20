@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="favicon.png" />
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HumbleOp — Debate with Respect</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HumbleOp — Debate with Purpose</title>
   <style>
     body {
       margin: 0;
@@ -15,44 +17,105 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       text-align: center;
+      padding: 2rem;
+      overflow-x: hidden;
     }
 
     img {
-      width: 160px;
+      width: 280px;
       height: auto;
       margin-bottom: 1.5rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: fadeInUp 1s ease-out forwards;
     }
 
     h1 {
-      font-size: 2.8rem;
+      font-size: 2.0rem;
       color: #7FAF92;
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.4s forwards;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      color: #5D749B;
+      margin-bottom: 1.5rem;
+      font-style: italic;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 0.8s forwards;
     }
 
     p {
-      font-size: 1.1rem;
-      max-width: 600px;
+      font-size: 1.05rem;
+      max-width: 700px;
       color: #CFCFCF;
       line-height: 1.6;
+      margin-bottom: 1rem;
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1.2s forwards;
     }
 
-    .tagline {
-      color: #5D749B;
-      font-style: italic;
-      margin-top: 0.5rem;
+    ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 2rem;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out 1.6s forwards;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+      color: #A1D9B4;
+      font-weight: 500;
+      transform: translateY(10px);
+      opacity: 0;
+      animation: fadeInUp 0.6s ease-out forwards;
+    }
+
+    li:nth-child(1) { animation-delay: 1.7s; }
+    li:nth-child(2) { animation-delay: 1.9s; }
+    li:nth-child(3) { animation-delay: 2.1s; }
+    li:nth-child(4) { animation-delay: 2.3s; }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 <body>
   <img src="logo.png" alt="HumbleOp Logo" />
-  <h1>HumbleOp</h1>
-  <p class="tagline">Debate with respect.</p>
-  <p>
-    A new platform for structured, fair, and respectful discussions.<br />
-    One post, one comment per user, voted by the community.<br />
-    The best argument wins a duel with the original poster.
+  <h1>Debate with purpose. Not volume.</h1>
+  <h2>A space where ideas fight fair.</h2>
+
+  <p>HumbleOp is a platform for structured, merit-based dialogue. Post a topic, receive one comment per user, and let the community decide who deserves to duel the author. Clear rules. Fair process.</p>
+
+  <ul>
+    <li>💬 One comment per user</li>
+    <li>🗳️ Votes decide the challenger</li>
+    <li>⚔️ Duels, not drama</li>
+    <li>🚫 No spam, no noise</li>
+  </ul>
+
+  <p style="
+    margin-top: 3rem;
+    font-size: 1.2rem;
+    color: #FFD700;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1s ease-out 2.8s forwards;
+  ">
+    🚧 Coming soon...
   </p>
 </body>
 </html>
